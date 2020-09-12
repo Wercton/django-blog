@@ -1,7 +1,7 @@
 /* url(http://cdn.wallpapersafari.com/91/91/KaJIWP.gif) no-repeat center center fixed; */
 
 body {
-  background: #000000;
+  background: #ffead0;
   color: #333333;
   margin-top: 5rem;
 }
@@ -35,7 +35,7 @@ ul {
 }
 
 .content-section {
-  background: #cacfd6;
+  background: #eeeeee;
   padding: 10px 20px;
   border: 1px solid;
   border-radius: 3px;
