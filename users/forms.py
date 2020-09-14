@@ -13,3 +13,12 @@ class FormularioRegistro(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
+
+
+class FormularioLogin(UserCreationForm):
+    username = forms.CharField(label=_('Vorname'))
+    password = forms.CharField(label=_('Passwort'))
+
+    class Meta:
+        model = User
+        fields = ['username', 'password']

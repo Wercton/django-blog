@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import FormularioRegistro
+from .forms import FormularioLogin
 
 def registrar(request):
     if request.method == 'POST':
@@ -13,7 +14,10 @@ def registrar(request):
             return redirect('login')
     else:
         form = FormularioRegistro()
-    return render(request, 'users/register.html', {'form': form})
+    return render(request, 'users/registrar.html', {'form': form})
+
+def login(request):
+    pass
 
 @login_required
 def perfil(request):
