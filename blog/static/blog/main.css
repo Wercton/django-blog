@@ -10,7 +10,11 @@ h1 {
   color: #ffffff /*#000000*/
 }
 
-h2, h3, h4, h5, h6 {
+h5 {
+  color: #000000;
+}
+
+h2, h3, h4, h6 {
   color: #444444;
 }
 
@@ -48,6 +52,11 @@ ul {
 
 .white-text {
   color: #ffffff;
+}
+
+.carousel-inner {
+  width: 70.2%;
+  margin-left: 14.9%;
 }
 
 .content-section {

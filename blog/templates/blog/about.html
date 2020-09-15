@@ -1,4 +1,44 @@
 {% extends "blog/base.html" %}
 {% block content %}
   <h1>Über</h1>
+  <br>
+  <main role='main'>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+
+        <div class="card-body bg-danger">
+          <h5 class="card-title">About the Website</h5>
+          <p class="card-text">This website was designed solely in the aim of the programmer's goal of learning Django.</p>
+          <a href="https://github.com/Wercton/django-basic" target="_blank" class="btn btn-light">Check out source code on GitHub</a>
+        </div>
+
+      </div>
+      <div class="carousel-item">
+
+        <div class="card-body bg-danger">
+          <h5 class="card-title">About the Programmer</h5>
+          <p class="card-text">Wercton Barbosa is a Computer Science student from UFT-Palmas, Brasil.</p>
+          <a href="https://github.com/Wercton" target="_blank" class="btn btn-light">Find him on GitHub</a>
+        </div>
+
+      </div>
+    </div>
+    <div id="carousel-button">
+      <a class="carousel-control-prev bg-danger" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next bg-danger" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  </main>
+  <br>
 {% endblock content %}
