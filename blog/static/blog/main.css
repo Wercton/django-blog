@@ -1,13 +1,13 @@
 /* url(http://cdn.wallpapersafari.com/91/91/KaJIWP.gif) no-repeat center center fixed; */
 
 body {
-  background: #ffead0;
+  background: #222222; /*#ffead0*/
   color: #333333;
   margin-top: 5rem;
 }
 
 h1 {
-  color: #000000
+  color: #ffffff /*#000000*/
 }
 
 h2, h3, h4, h5, h6 {
@@ -19,19 +19,35 @@ ul {
 }
 
 .bg-steel {
-  background-color: #19647e;
+  background-color: #eeeeee; /*#19647e*/
 }
 
 .site-header .navbar-nav .nav-link {
-  color: #cacfd6;
+  color: #000000; /*#cacfd6*/
+}
+
+#blog-title {
+  color: #ff0000
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #111111;
+  color: #ff0000;
 }
 
 .site-header .navbar-nav .nav-link.active {
   font-weight: 500;
+}
+/*author's name*/
+.mr-2 {
+  color: #ff0000;
+}
+
+.sidebar {
+  color: #000000;
+}
+
+.white-text {
+  color: #ffffff;
 }
 
 .content-section {
@@ -47,7 +63,7 @@ ul {
 }
 
 a.article-title:hover {
-  color: #19647e;
+  color: #ff0000;
   text-decoration: none;
 }
 

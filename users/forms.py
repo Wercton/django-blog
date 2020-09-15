@@ -6,8 +6,8 @@ from django.utils.translation import gettext_lazy as _
 
 class FormularioRegistro(UserCreationForm):
     username = forms.CharField(label=_('Vorname'))
-    password1 = forms.CharField(label=_('Passwort'))
-    password2 = forms.CharField(label=_('Passwort Bestätigung'))
+    password1 = forms.CharField(label=_('Passwort'), widget=forms.PasswordInput)
+    password2 = forms.CharField(label=_('Passwort Bestätigung'), widget=forms.PasswordInput)
     email = forms.EmailField()
 
     class Meta:

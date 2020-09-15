@@ -19,9 +19,9 @@
   </head>
   <body>
     <header class="site-header">
-      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Django Blog</a>
+          <a id="blog-title" class="navbar-brand mr-4" href="{% url 'blog-home' %}">Django Blog</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
@@ -59,7 +59,7 @@
         </div>
         <div class="col-md-4">
           <div class="content-section">
-            <h3>Sidebar</h3>
+            <h3 class="sidebar">Sidebar</h3>
             <p class='text-muted'>Beispiel
               <ul class="list-group">
                 <li class="list-group-item list-group-item-light">Neueste Beiträge</li>
