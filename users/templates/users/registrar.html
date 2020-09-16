@@ -2,16 +2,16 @@
 {% load crispy_forms_tags %}
 {% block content %}
   <div class="content-section">
-    <form method="POST">
-      {% csrf_token %}
-      <fieldset class="form-group">
-        <legend class="border-bottom mb-4">Jetzt registrieren!</legend>
-        {{ form|crispy }}
-      </fieldset>
-      <div class="form-group">
-        <button class="btn btn-danger" type="submit">Registrieren</button>
-      </div>
-    </form>
+      <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+          <legend class="border-bottom mb-4">Jetzt registrieren!</legend>
+          {{ form|crispy }}
+        </fieldset>
+        <div class="form-group">
+          <button class="btn btn-danger" type="submit">Registrieren</button>
+        </div>
+      </form>
     <div class="border-top pt-3">
       <small class="text-muted">
         Haben Sie bereits ein Konto? <a class="badge badge-danger ml-2" href="{% url 'login' %}">Einloggen</a>
