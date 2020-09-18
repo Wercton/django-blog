@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.models import User
 from django.views.generic import (
     ListView,
     DetailView,
@@ -18,7 +19,7 @@ def home(request):
     return render(request, 'blog/home.html', context)
 
 
-class PostListView(ListView):
+class ListadePostagem(ListView):
     model = Post
     template_name = 'blog/home.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'posts'
@@ -26,11 +27,22 @@ class PostListView(ListView):
     paginate_by = 5
 
 
-class PostDetailView(DetailView):
+class PostagensUsuario(ListView):
+    model = Post
+    template_name = 'blog/user_posts.html'
+    context_object_name = 'posts'
+    paginate_by = 5
+
+    def get_queryset(self):
+        usuario= get_object_or_404(User, username=self.kwargs.get('username'))
+        return Post.objects.filter(author=usuario).order_by('-date_posted')
+
+
+class PostagemDetalhada(DetailView):
     model = Post
 
 
-class PostCreateView(LoginRequiredMixin, CreateView):
+class CriarPost(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['title', 'content']
 
@@ -39,7 +51,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class EditarPost(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
     fields = ['title', 'content']
 
@@ -54,7 +66,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return False
 
 
-class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+class DeletarPost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     success_url = '/'
 

@@ -4,7 +4,7 @@
     <img src="{{ object.author.perfil.image.url }}" class="rounded-circle article-img">
     <div class="media-body">
       <div class="article-metadata">
-        <a class="badge badge-danger" href="#">{{ object.author }}</a>
+        <a class="badge badge-danger" href="{% url 'user-posts' post.author.username %}">{{ object.author }}</a>
         <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
         {% if object.author == user %}
           <a class="badge badge-secondary" href="{% url 'post-update' object.id %}">aktualisieren</a>
