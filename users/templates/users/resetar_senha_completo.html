@@ -1,0 +1,8 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="alert alert-secondary">
+    Ihr neues Passwort ist fertig.
+  </div>
+  <a class="badge badge-danger ml-2" href="{% url 'login' %}">ausloggen</a>
+{% endblock content %}

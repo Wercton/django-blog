@@ -26,6 +26,18 @@ urlpatterns = [
     path('profil/', user_views.perfil, name='perfil'),
     path('loggen/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('ausloggen/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+    path('passwort-zurucksetzen/',
+        auth_views.PasswordResetView.as_view(template_name='users/resetar_senha.html'),
+         name='password_reset'),
+    path('passwort-zurucksetzen/fertig/',
+        auth_views.PasswordResetDoneView.as_view(template_name='users/resetar_senha_sucesso.html'),
+         name='password_reset_done'),
+    path('passwort-zurucksetzen-bestatigung/<uidb64>/<token>/',
+        auth_views.PasswordResetConfirmView.as_view(template_name='users/resetar_senha_confirmacao.html'),
+         name='password_reset_confirm'),
+    path('passwort-zurucksetzen-fertig/',
+        auth_views.PasswordResetCompleteView.as_view(template_name='users/resetar_senha_completo.html'),
+         name='password_reset_complete'),
     path('', include('blog.urls')),
 ]
 

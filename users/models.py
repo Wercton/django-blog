@@ -13,8 +13,8 @@ class Perfil(models.Model):
     def __str__(self):
         return f'{self.user.username} Perfil'
 
-    def save(self):
-        super().save()
+    def save(self, *args, **kwargs):
+        super(Perfil, self).save(*args, **kwargs)
         img = Image.open(self.image.path)
         if img.height > 300 or img.width > 300:
             output_tamanho = (300, 300)
