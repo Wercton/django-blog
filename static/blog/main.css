@@ -1,0 +1,115 @@
+/* url(http://cdn.wallpapersafari.com/91/91/KaJIWP.gif) no-repeat center center fixed; */
+
+body {
+  background: #222222; /*#ffead0*/
+  color: #333333;
+  margin-top: 5rem;
+}
+
+h1 {
+  color: #ffffff /*#000000*/
+}
+
+h5 {
+  color: #000000;
+}
+
+h2, h3, h4, h6 {
+  color: #444444;
+}
+
+ul {
+  margin: 0;
+}
+
+.bg-steel {
+  background-color: #eeeeee; /*#19647e*/
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #000000; /*#cacfd6*/
+}
+
+#blog-title {
+  color: #ff0000
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ff0000;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+/*author's name*/
+.mr-2 {
+  color: #ff0000;
+}
+
+.sidebar {
+  color: #000000;
+}
+
+.white-text {
+  color: #ffffff;
+}
+
+.carousel-inner {
+  width: 70.2%;
+  margin-left: 14.9%;
+}
+
+.content-section {
+  background: #eeeeee;
+  padding: 10px 20px;
+  border: 1px solid;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  color: #111111;
+}
+
+a.article-title:hover {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #111111
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
